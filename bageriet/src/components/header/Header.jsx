@@ -1,10 +1,15 @@
+import style from './Header.module.scss';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 export const Header = () => (
-    <header style={{ padding: "1rem", background: "#282c34", color: "white" }}>
+    <header className={style.header} >
       <nav>
-        <ul style={{ display: "flex", listStyle: "none", margin: 0, padding: 0 }}>
-          <li style={{ margin: "0 1rem" }}><Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link></li>
-          <li style={{ margin: "0 1rem" }}><Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link></li>
-          <li style={{ margin: "0 1rem" }}><Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link></li>
+        <ul>
+          <li ><Link to="/" >Forside</Link></li>
+          <li ><Link to="/about" >Produkter</Link></li>
+          <li ><Link to="/about" >bageriet</Link></li>
+          <li ><Link to="/contact" >Kontakt</Link></li>
+          <li ><Link to="/Login" >Login</Link></li>
         </ul>
       </nav>
     </header>
